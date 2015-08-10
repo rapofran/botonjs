@@ -10,7 +10,8 @@
     "request": "^2.42.0",
     "requests": "0.0.1",
     "underscore": "^1.6.0",
-    "moment": "^2.9.0"
+    "moment": "^2.9.0",
+    "open-graph": "0.1.5"
   },
   "devDependencies": {},
   "scripts": {
