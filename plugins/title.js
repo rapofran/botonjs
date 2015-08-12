@@ -7,7 +7,7 @@ var og = require('open-graph');
 
 // hack
 String.prototype.scan = function(regex) {
-    var result = []
+    var result = [];
 
     this.replace(regex, function() {
         result.push(Array.prototype.slice.call(arguments, 1, -2));
