@@ -34,7 +34,7 @@ function getTitle(link) {
 function scrap(nick, text, message) {
     var bot = this;
 
-    _.each(text.scan(/^(http|https):\/\//g), getTitle);
+    _.each(text.scan(/(http|https):\/\//g), getTitle);
 }
 
 
