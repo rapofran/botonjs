@@ -14,14 +14,14 @@ String.prototype.scan = function(regex) {
     });
 
     return result;
-}
+};
 
-function getTitle(link) {
+function getTitle(link, bot) {
     var title = '';
 
     og(link, function(err, meta){
         title = meta.title;
-    })
+    });
 
     // does't have open-graph
     if (title === '') {
@@ -34,7 +34,9 @@ function getTitle(link) {
 function scrap(nick, text, message) {
     var bot = this;
 
-    _.each(text.scan(/(http|https):\/\//g), getTitle);
+    _.each(text.scan(/(http|https):\/\//g), function(link) {
+        getTitle(link, bot);
+    });
 }
 
 
